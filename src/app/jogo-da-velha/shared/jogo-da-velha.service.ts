@@ -48,6 +48,10 @@ export class JogoDaVelhaService {
     return this._showFinal;
   }
 
+  public get jogador(): number {
+    return this._jogador;
+  }
+
   public iniciarJogo(): void {
     this._showInicio = false;
     this._showTabuleiro = true;
@@ -186,6 +190,13 @@ export class JogoDaVelhaService {
     }
 
     return exibirVitoria;
+  }
+
+  public iniciarNovoJogo(): void {
+  	this.inicializar();
+    this._showFinal = false;
+    this._showInicio = false;
+    this._showTabuleiro = true;
   }
 
 }
